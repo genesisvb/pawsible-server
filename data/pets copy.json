@@ -1,0 +1,20 @@
+[
+    {
+        "id": "b0a7dd85-a804-4a04-8cfd-560c6f0381b1",
+        "photo": "TODO: image url",
+        "species": "Cat",
+        "name": "Charlotte",
+        "breed": "Mix",
+        "gender": "Female",
+        "character": [
+            "cautious",
+            "calm"
+        ],
+        "age": "+10 years",
+        "area": "Quarantine",
+        "tasks": [
+            "Eye cleaning"
+        ],
+        "notes": "Charlotte was surrendered by her previous owners due to a change in living circumstances. According to her medical records, Charlotte is up-to-date on all her vaccinations"
+    }
+]
