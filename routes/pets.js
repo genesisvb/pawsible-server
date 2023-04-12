@@ -22,14 +22,56 @@ function writePetsData(data) {
   fs.writeFileSync(dataFile, newData);
 }
 
+function addPhotoUrl(pet) {
+  return {
+    ...pet,
+    photoUrl: `http://localhost:5000/images/${pet.photo}`,
+  };
+}
+
 function readPetsData() {
   const petFile = fs.readFileSync(dataFile);
   const petData = JSON.parse(petFile);
   return petData;
 }
-// upload.single("avatar")
+
 petsRouter.get("/", (request, response) => {
-  response.status(200).json(readPetsData());
+  response.status(200).json(readPetsData().map(addPhotoUrl));
+});
+
+petsRouter.get("/:id", (request, response) => {
+  const pet = readPetsData().find((pet) => pet.id === request.params.id);
+
+  if (pet) {
+    response.status(200).json(addPhotoUrl(pet));
+  } else {
+    response.status(404).send(`Pet with id ${request.params.id} not found`);
+  }
+});
+
+petsRouter.put("/:id", (request, response) => {
+  const petsData = readPetsData();
+  const pet = petsData.find((pet) => pet.id === request.params.id);
+
+  if (pet) {
+    const body = request.body;
+    pet.photo = body.photo;
+    pet.species = body.species;
+    pet.name = body.name;
+    pet.breed = body.breed;
+    pet.gender = body.gender;
+    pet.character = body.character;
+    pet.age = body.age;
+    pet.area = body.area;
+    pet.tasks = body.tasks;
+    pet.notes = body.notes;
+
+    writePetsData(petsData);
+
+    response.status(200).json(pet);
+  } else {
+    response.status(404).send(`Pet with id ${request.params.id} not found`);
+  }
 });
 
 petsRouter.post("/photos", upload.single("photo"), (request, response) => {
@@ -47,7 +89,7 @@ petsRouter.post("/", (request, response) => {
     breed: body.breed,
     gender: body.gender,
     character: body.character,
-    age: body.area,
+    age: body.age,
     area: body.area,
     tasks: body.tasks,
     notes: body.notes,
