@@ -1,0 +1,86 @@
+[
+    {
+        "id": "52171ad4-bc2d-47d8-b49e-99e42a172304",
+        "photo": "dog2.svg",
+        "species": "Dog",
+        "name": "Toby",
+        "breed": "Beagle",
+        "gender": "Male",
+        "character": [
+            "friendly",
+            "calm",
+            "playful"
+        ],
+        "tasks": [
+            "Grooming",
+            "Cage desinfecting",
+            "Walk"
+        ],
+        "area": "Quarantine",
+        "age": "+10",
+        "notes": "Toby was rescued from the streets. No known past history"
+    },
+    {
+        "id": "c9f961b4-a04f-46e2-a05d-b26fb362e659",
+        "photo": "dog-pic.svg",
+        "species": "Dog",
+        "name": "Arthur",
+        "breed": "Mix",
+        "gender": "Male",
+        "character": [
+            "friendly",
+            "active",
+            "playful"
+        ],
+        "age": "0-1",
+        "area": "Quarantine",
+        "tasks": [
+            "Grooming",
+            "Eye cleaning",
+            "Walk"
+        ],
+        "notes": "Arthur was surrendered by his owners due to a change in living circumstances. He is not up-to-date with his vaccines."
+    },
+    {
+        "id": "4a8a5055-3a1f-4a44-9806-c48d4766129e",
+        "photo": "sirius.JPG",
+        "species": "Dog",
+        "name": "Sirius",
+        "breed": "Golden Retriever",
+        "gender": "Male",
+        "character": [
+            "friendly",
+            "cautious",
+            "calm"
+        ],
+        "age": "0-1",
+        "area": "Solo Kennel",
+        "tasks": [
+            "Grooming",
+            "Cage desinfecting"
+        ],
+        "notes": "Some notes"
+    },
+    {
+        "id": "16ecb51c-be65-4052-819f-07956d279bae",
+        "photo": "cat2.svg",
+        "species": "Cat",
+        "name": "Lucky",
+        "breed": "Mix",
+        "gender": "Male",
+        "character": [
+            "friendly",
+            "active",
+            "aggressive",
+            "playful"
+        ],
+        "age": "2-5",
+        "area": "Play Room",
+        "tasks": [
+            "Grooming",
+            "Cage desinfecting",
+            "Walk"
+        ],
+        "notes": "Lucky was surrendered by his previous owner because he was too busy playing ping-pong and couldn't take good care of him."
+    }
+]
